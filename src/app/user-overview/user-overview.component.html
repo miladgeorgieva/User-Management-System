@@ -1,0 +1,34 @@
+<div id="overview-container">
+  <h3>Add new user</h3>
+  <form #f="ngForm">
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+            <input type="text" pInputText placeholder="First Name" name="firstName" [(ngModel)]="bindingModel.firstName"/>         
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+            <input type="text" pInputText placeholder="Last Name" name="lastName" [(ngModel)]="bindingModel.lastName"/>         
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-at"></i></span>
+            <input type="text" pInputText placeholder="Email" name="email" [(ngModel)]="bindingModel.email"/>         
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
+            <input type="text" pInputText placeholder="Phone Number" name="phoneNumber" [(ngModel)]="bindingModel.phoneNumber"/>         
+        </div>
+      </div>
+    </div>
+    <p-button label="Add user" class="add-btn" [disabled]="f.invalid" (onClick)="add()"></p-button>
+  </form>
+</div>
+
+<app-user-data></app-user-data>
